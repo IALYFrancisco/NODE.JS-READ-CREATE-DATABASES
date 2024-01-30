@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Liste de données</title>
+</head>
+<body>
+    <h1>Liste de données de la base</h1>
+    <ul>
+        <% données.forEach(function(row) { %>
+            <li><%= row.nom %>: <%= row.email %></li>
+        <% }); %>
+    </ul>
+
+    <h2>Ajoutez des données</h2>
+    <form method="POST" action="/ajouter">
+        <input type="text" name="nom" placeholder="nom">
+        <input type="text" name="email" placeholder="email">
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>
